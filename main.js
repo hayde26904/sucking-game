@@ -112,9 +112,12 @@ function update() {
         }
     }
 
+    requestAnimationFrame(update);
+    
 }
 
-setInterval(update, 1000 / 60);
+//setInterval(update, 1000 / 60);
+requestAnimationFrame(update);
 
 function keyDown(key) {
     return activeKeys.includes(key);
