@@ -97,7 +97,7 @@ function update() {
         let dx = coin.x - centerX;
         let dy = coin.y - centerY;
         let distance = Math.sqrt(dx * dx + dy * dy);
-        if(distance < 100){
+        if(distance < 100 || coin.beingSucked){
             let angle = Math.atan2(dy, dx);
             let tx = centerX + Math.cos(angle) * 200;
             let ty = centerY + Math.sin(angle) * 200;
